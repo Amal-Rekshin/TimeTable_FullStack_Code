@@ -54,7 +54,7 @@ public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHan
         String token = jwtUtil.generateToken(user);
         
         // Redirect to frontend React app callback URL
-       String redirectUrl = frontendUrl + "/auth/callback?token=" + token;
+       String redirectUrl = frontendUrl + "/?token=" + token;
         getRedirectStrategy().sendRedirect(request, response, redirectUrl);
     }
 }
