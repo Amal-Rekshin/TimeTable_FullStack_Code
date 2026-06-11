@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://classtimescheduler.netlify.app")
 public class UserController {
 
     @Autowired
