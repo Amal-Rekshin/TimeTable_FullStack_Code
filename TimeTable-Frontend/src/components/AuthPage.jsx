@@ -223,7 +223,7 @@ const AuthPage = () => {
 
                     {/* Google Login */}
                     <a
-                        href="http://localhost:8080/oauth2/authorization/google"
+                        href="https://timetable-fullstack-code.onrender.com/oauth2/authorization/google"
                         className="w-full py-3.5 border border-gray-100 rounded-2xl font-semibold text-gray-700 hover:bg-gray-50 transition-all flex items-center justify-center gap-3 shadow-sm active:scale-[0.99] no-underline"
                     >
                         <GoogleIcon />
