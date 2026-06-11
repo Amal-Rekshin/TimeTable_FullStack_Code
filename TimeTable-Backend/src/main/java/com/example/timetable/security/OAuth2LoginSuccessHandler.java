@@ -24,6 +24,9 @@ public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHan
     @Autowired
     private JwtUtil jwtUtil;
 
+    @Value("${FRONTEND_URL}")
+    private String frontendUrl;
+
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                         Authentication authentication) throws IOException, ServletException {
@@ -51,7 +54,7 @@ public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHan
         String token = jwtUtil.generateToken(user);
         
         // Redirect to frontend React app callback URL
-        String redirectUrl = "https://classtimescheduler.netlify.app/auth/callback?token=" + token;
+       String redirectUrl = frontendUrl + "/auth/callback?token=" + token;
         getRedirectStrategy().sendRedirect(request, response, redirectUrl);
     }
 }
