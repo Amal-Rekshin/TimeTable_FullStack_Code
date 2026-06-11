@@ -51,7 +51,7 @@ public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHan
         String token = jwtUtil.generateToken(user);
         
         // Redirect to frontend React app callback URL
-        String redirectUrl = "http://localhost:5173/timeTable_management/auth/callback?token=" + token;
+        String redirectUrl = "https://sprightly-taffy-950990.netlify.app/auth/callback?token=" + token;
         getRedirectStrategy().sendRedirect(request, response, redirectUrl);
     }
 }
