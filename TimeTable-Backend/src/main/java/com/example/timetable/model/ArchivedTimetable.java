@@ -21,11 +21,11 @@ public class ArchivedTimetable {
     private String dept;
 
     @Lob
-    @Column(columnDefinition = "LONGTEXT")
+    @Column(columnDefinition = "TEXT")
     private String grid; // JSON representation of the timetable grid
 
     @Lob
-    @Column(columnDefinition = "LONGTEXT")
+    @Column(columnDefinition = "TEXT")
     private String staffDetails;
 
     private String version;

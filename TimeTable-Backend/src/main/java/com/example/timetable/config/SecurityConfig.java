@@ -21,7 +21,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable()) 
             // Disable CSRF for simple testing (should be enabled in production)
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/**", "/").permitAll() 
+                .requestMatchers("/api/**", "/", "/error").permitAll() 
                 // Keep existing endpoints public
                 .anyRequest().authenticated()
             )
