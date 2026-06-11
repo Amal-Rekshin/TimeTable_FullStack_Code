@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/config")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://classtimescheduler.netlify.app")
 public class SystemConfigController {
 
     private final SystemConfigRepository repository;
